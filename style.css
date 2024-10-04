@@ -584,12 +584,21 @@ body {
 
 .social-media-link i {
   font-size: 3rem;
-  color: #fff;
+  color: #e41c6e;
+  transition: transform 0.5s;
+}
+.social-media-link i:hover {
+  transform: scale(1.3);
 }
 .social-media-link img {
   width: 2.5rem;
   height: 2.5rem;
-  background-color: #fff;
+  background-color: #e41c6e;
+  transition: transform 0.5s;
+}
+
+.social-media-link img:hover {
+  transform: scale(1.3);
 }
 
 .social-media p {
@@ -601,6 +610,11 @@ body {
   font-weight: bold;
   color: #fff;
   text-transform: lowercase;
+  transition: transform 0.5s;
+}
+
+.social-media p:hover {
+  transform: scale(1.3);
 }
 
 .copyright {
