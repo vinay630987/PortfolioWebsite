@@ -65,7 +65,7 @@ body {
   flex-direction: column;
   opacity: 1;
   position: relative;
-  background: linear-gradient(to right, #000, #934465);
+  background: linear-gradient(to right, #000, #2d2126);
 }
 
 .person-img {
@@ -75,25 +75,48 @@ body {
   margin: 5rem 0 0 -105rem;
   object-fit: fill;
   border-radius: 50%;
-  border: 0.2rem solid #e41c6f;
+  border: 0.2rem solid #512337;
   background-color: rgba(255, 255, 255, 0.7);
   opacity: 0.9;
-  box-shadow: 2px 2px 5px black;
+  /*box-shadow: 2px 2px 5px rgb(223, 219, 219);*/
   position: relative;
+  animation: fadeIn 5s ease-in forwards;
+  cursor: pointer;
+}
+
+.person-img:hover {
+  box-shadow: 2px 2px 5px rgb(143, 133, 133);
 }
 
 .section-1-heading {
-  font-size: 4rem;
-  font-weight: 700;
   color: #fff;
-  background-color: #e41c6e;
+  /* background-color: #e41c6e; */
   padding: 0 3rem;
   margin: -5rem 0 5rem 0;
   text-transform: uppercase;
   letter-spacing: 1rem;
-  border-bottom: 0.3rem solid #fff;
+  border-bottom: 0.1rem solid #fff;
   text-shadow: 0.2rem 0.2rem 1rem #555;
-  transform: skew(-15deg);
+  transform: skew(-10deg);
+}
+
+.section-1-heading span {
+  font-size: 2rem;
+  font-weight: 700;
+  opacity: 0;
+  animation: typing 5s forwards;
+  animation-delay: calc(var(--char-index) * 0.1s);
+}
+
+@keyframes typing {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 30;
+    transform: translateY(0);
+  }
 }
 
 .person-container {
@@ -153,9 +176,9 @@ body {
 .section-1-btn {
   font-size: 1.7rem;
   font-weight: 700;
-  color: #333;
-  background-color: #fff;
-  border: 0.3rem solid #333;
+  color: #efe6e6;
+  /*background-color: #fff;*/
+  border: 0.1rem solid #333;
   position: absolute;
   margin: 2rem 0 0 2rem;
   text-transform: uppercase;
@@ -191,11 +214,11 @@ body {
 }
 
 .hire:hover::before {
-  left: 140%;
+  left: 130%;
 }
 
 .section-1-btn:hover {
-  background-color: #e41c6f;
+  background-color: #252022;
   color: #fff;
 }
 
@@ -209,18 +232,20 @@ body {
   font-size: 3rem;
   justify-content: center;
   text-decoration: none;
-  color: black;
-  background-color: #e41c6e;
+  color: #fff;
+  /* background-color: #e41c6e;
   border: 2px solid white;
-  border-radius: 50%;
+  border-radius: 50%; */
   width: 40px;
   height: 40px;
   margin: 13rem 1rem;
-  opacity: 0.5;
+  opacity: 0.8;
   transition: transform 0.5s;
 }
 
 .icon-container a:hover {
+  border: 2px solid white;
+  border-radius: 50%;
   opacity: 1;
   transform: scale(1.3);
 }
@@ -268,6 +293,7 @@ body {
     transform: rotate(360deg);
   }
 }
+
 /* End of Section 1 */
 
 /* Navbar */
@@ -577,15 +603,14 @@ body {
   margin: 0 4rem;
   padding: 0.7rem;
   /* background-color: #e41c6f; */
-  border-radius: 0.5rem;
   display: inline-block;
   position: relative;
 }
 
 .social-media-link i {
   font-size: 3rem;
-  color: #e41c6e;
   transition: transform 0.5s;
+  color: #ccc;
 }
 .social-media-link i:hover {
   transform: scale(1.3);
@@ -593,27 +618,11 @@ body {
 .social-media-link img {
   width: 2.5rem;
   height: 2.5rem;
-  background-color: #e41c6e;
+  background-color: #fff;
   transition: transform 0.5s;
 }
 
 .social-media-link img:hover {
-  transform: scale(1.3);
-}
-
-.social-media p {
-  display: inline;
-  justify-content: center;
-  margin: 5rem 0 0 -8.2rem;
-  position: absolute;
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #fff;
-  text-transform: lowercase;
-  transition: transform 0.5s;
-}
-
-.social-media p:hover {
   transform: scale(1.3);
 }
 
@@ -648,7 +657,7 @@ body {
 
 @media (max-width: 1200px) {
   .section-1 {
-    height: 90vw;
+    height: 70vw;
   }
 
   .person-name {
@@ -656,7 +665,7 @@ body {
   }
 
   .person-img {
-    margin-left: -50rem;
+    margin-left: -70rem;
     width: 30rem;
     height: 30rem;
   }
@@ -666,7 +675,7 @@ body {
   }
 
   .section-1-heading {
-    font-size: 3rem;
+    font-size: 1.5rem;
     margin-top: -20rem;
   }
   .services {
@@ -696,9 +705,9 @@ body {
 }
 
 @media (max-width: 800px) {
-  .section-1-heading {
-    font-size: 2rem;
-    margin-top: -15rem;
+  .section-1-heading span {
+    font-size: 3rem;
+    padding: 0.1rem;
   }
   .section-1 {
     height: 140vh;
@@ -706,7 +715,7 @@ body {
 
   .person-container {
     left: 25%;
-    margin-top: 15rem;
+    margin-top: 20rem;
   }
   .person-img {
     width: 20rem;
@@ -716,10 +725,13 @@ body {
   .floating-bg {
     top: -140vw;
   }
+  .person-img:hover {
+    box-shadow: 2px 2px 5px rgb(143, 133, 133);
+  }
 }
 
 @media (max-width: 600px) {
-  .section-1-heading {
+  .section-1-heading span {
     font-size: 1.8rem;
   }
 
@@ -731,7 +743,7 @@ body {
     padding: 10rem;
   }
   .section-1-heading {
-    margin-bottom: 10rem;
+    margin-top: -20rem;
   }
   .progress-bar {
     width: 45rem;
@@ -745,7 +757,7 @@ body {
   }
   .person-container {
     left: 14%;
-    margin-top: 20rem;
+    margin-top: 15rem;
   }
   .person-info {
     font-size: 1.8rem;
@@ -760,15 +772,22 @@ body {
   .section-1 {
     height: 110vh;
   }
+  .section-1-heading span {
+    font-size: 3.1rem;
+    font-weight: 700;
+    border-width: 1rem;
+  }
+  .person-img:hover {
+    box-shadow: 2px 2px 5px rgb(143, 133, 133);
+  }
 }
 
 @media (max-width: 450px) {
   html {
     font-size: 45%;
   }
-  .section-1-heading {
-    font-size: 2rem;
-    padding: 0.8rem;
+  .section-1-heading span {
+    font-size: 2.1rem;
   }
   .navbar-link {
     margin: 0 1rem;
@@ -791,7 +810,7 @@ body {
   }
 
   .person-img {
-    margin-top: -7rem;
+    margin-top: -2rem;
   }
 
   .contact-form {
@@ -799,7 +818,7 @@ body {
   }
 
   .section-4-heading {
-    margin-bottom: -8rem;
+    margin-bottom: -7rem;
   }
 
   .section-5 {
@@ -811,5 +830,11 @@ body {
 
   .floating-bg {
     top: -140vw;
+  }
+  .section-1-heading {
+    margin-top: -20rem;
+  }
+  .person-img:hover {
+    box-shadow: 2px 2px 5px rgb(143, 133, 133);
   }
 }
