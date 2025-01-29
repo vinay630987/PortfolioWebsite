@@ -180,11 +180,42 @@ body {
   /*background-color: #fff;*/
   border: 0.1rem solid #333;
   position: absolute;
+  margin: 2rem 0 0 18rem;
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+  display: flex;
+  padding: 0.2rem;
+}
+
+.education-btn {
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: #efe6e6;
+  /*background-color: #fff;*/
+  border: 0.1rem solid #333;
+  position: absolute;
   margin: 2rem 0 0 2rem;
   text-transform: uppercase;
   letter-spacing: 0.3rem;
   display: flex;
   padding: 0.2rem;
+  overflow: hidden;
+}
+.education-btn::before {
+  content: "";
+  position: absolute;
+  width: 150%;
+  height: 5rem;
+  background-color: #00aed5;
+  left: -20%;
+  transform: rotate(-50deg) translateX(-4rem);
+  transform-origin: left bottom;
+  opacity: 0.8;
+  transition: left 0.3s;
+}
+
+.education-btn:hover::before {
+  left: 130%;
 }
 
 .hire {
@@ -194,7 +225,7 @@ body {
   border-radius: 20%;
   position: absolute;
   display: flex;
-  margin: 1.7rem 0 0 20rem;
+  margin: 1.7rem 0 0 33rem;
   font-size: 1.7rem;
   color: #fff;
   overflow: hidden;
@@ -360,8 +391,10 @@ body {
   align-items: center;
   position: relative;
   overflow: hidden;
+  background-color: #000;
 }
 
+/*
 #bg-videoo {
   position: absolute;
   top: 50%;
@@ -375,8 +408,8 @@ body {
   background-size: cover;
   filter: brightness(
     50%
-  ); /* Optional: darken the video for better text readability */
-}
+  ); /* Optional: darken the video for better text readability 
+} */
 
 .progress-bars-wrapper {
   margin-bottom: 10rem;

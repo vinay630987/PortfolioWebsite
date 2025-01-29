@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Education - Vinay Kumar</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Wix+Madefor+Text:ital,wght@0,400..800;1,400..800&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background: black;
+        color: white;
+        font-family: "Jost", sans-serif;
+        text-align: center;
+        padding: 20px;
+      }
+
+      .education-heading {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+        position: relative;
+      }
+      .education-heading::after {
+        content: "";
+        display: block;
+        width: 100px;
+        height: 4px;
+        background-color: #ffcc00;
+        margin: 10px auto;
+      }
+
+      .education-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        justify-content: center;
+        margin-top: 20px;
+      }
+
+      .education-details {
+        width: 60%;
+        text-align: left;
+        padding: 20px;
+        background-color: rgba(0, 0, 0, 0.7);
+        border-radius: 10px;
+        border: 2px solid white;
+      }
+
+      .education-details h2 {
+        font-size: 1.8rem;
+        color: #257482;
+        display: flex;
+        align-items: center;
+      }
+
+      .education-details h2::before {
+        content: "\1F393"; /* Graduation cap emoji */
+        margin-right: 10px;
+      }
+
+      .education-details p {
+        font-size: 1.2rem;
+        margin-top: 10px;
+      }
+
+      .highlight {
+        background-color: rgba(255, 255, 0, 0.3);
+        padding: 2px 5px;
+        border-radius: 5px;
+      }
+
+      .back-home {
+        display: inline-block;
+        margin-top: 30px;
+        padding: 10px 20px;
+        color: #000;
+        font-weight: bold;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background 0.3s;
+        background-color: azure;
+      }
+      .back-home:hover {
+        background-color: #e6b800;
+      }
+
+      /* Animation for the education heading underline */
+      .education-heading::after {
+        content: "";
+        display: block;
+        width: 0;
+        height: 4px;
+        background-color: #ffcc00;
+        margin: 10px auto;
+        transition: width 1s ease;
+      }
+
+      .education-heading {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+        position: relative;
+        text-align: center; /* Ensure the heading stays centered */
+      }
+
+      /* Animation for the education details to fade in */
+      .education-details {
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeInDetails 5s forwards;
+        animation-delay: 1s; /* Delay the start of the animation */
+      }
+
+      /* Sequential delay for each education detail */
+      .education-container:nth-child(1) .education-details {
+        animation-delay: 1s; /* 1 second delay */
+      }
+
+      .education-container:nth-child(2) .education-details {
+        animation-delay: 2s; /* 2 second delay */
+      }
+
+      .education-container:nth-child(3) .education-details {
+        animation-delay: 3s; /* 3 second delay */
+      }
+
+      /* Keyframes for the heading underline animation */
+      @keyframes headingUnderline {
+        0% {
+          width: 0;
+        }
+        100% {
+          width: 100px;
+        }
+      }
+
+      /* Keyframes for the fade-in animation of education details */
+      @keyframes fadeInDetails {
+        0% {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        .education-heading {
+          font-size: 2rem;
+        }
+
+        .education-container {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .education-details {
+          width: 90%;
+          text-align: center;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .education-heading {
+          font-size: 1.8rem;
+        }
+
+        .education-details h2 {
+          font-size: 1.5rem;
+        }
+
+        .education-details p {
+          font-size: 1rem;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1 class="education-heading">My Education Journey</h1>
+
+    <div class="education-container">
+      <div class="education-details">
+        <h2>Graduation</h2>
+        <p>
+          I have completed my graduation in 2023 from Bharath Institute of
+          Higher Education and Research, Chennai, Tamil Nadu under the stream of
+          <span class="highlight"
+            >Electronics and Communication Engineering</span
+          >.
+        </p>
+        <p>CGPA: 8.45</p>
+      </div>
+    </div>
+
+    <div class="education-container">
+      <div class="education-details">
+        <h2>HSC (High School Certificate)</h2>
+        <p>
+          I have completed my high school certificate in 2019 from Sri Narayana
+          Junior College, Khammam, Telangana under the stream of
+          <span class="highlight">Science</span>.
+        </p>
+        <p>Marks: 896/1000</p>
+      </div>
+    </div>
+
+    <div class="education-container">
+      <div class="education-details">
+        <h2>SSC (Secondary School Certificate)</h2>
+        <p>
+          I have completed my secondary school education in 2017 from Sri
+          Narayana High School, Khammam, Telangana.
+        </p>
+        <p>GPA: 7.2</p>
+      </div>
+    </div>
+
+    <a href="index.html" class="back-home">&#8592; Back to Home</a>
+  </body>
+</html>
